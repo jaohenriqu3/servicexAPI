@@ -4,24 +4,31 @@ import br.com.joãoherique.servicex.servicex.domain.Categoria;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import jakarta.persistence.*;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import lombok.Data;
 
-import java.util.list;
+import java.util.List;
 
 @Data
 @Entity
-@Table(nome = "Categoria")
-public class Categoria (){
+@Table(name = "CATEGORIA")
+public class Categoria {
     @Id
-    @GeneratedValue (strategy = GenerationType.Identy)
-    @column (name = "id_categoria")
-    private Integer idCategoria
-    @column (name = "nome_categoria")
+    @GeneratedValue
+    @Column(name = "ID_CATEGORIA")
+    private Integer idCategoria;
+    @Column(name = "NOME_CATEGORIA")
     private String nomeCategoria;
-    @column (name = "servicos")
-    @OneTomany(mappedBy = "categoria", cascade = cascadeType.ALL)
+    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
     private List<Servico> servicos;
-}
 
     public Categoria(){
+    }
 
+    public Categoria(Integer idCategoria, String nomeCategoria, List<Servico> servicos) {
+        this.idCategoria = idCategoria;
+        this.nomeCategoria = nomeCategoria;
+        this.servicos = servicos;
+    }
 }
