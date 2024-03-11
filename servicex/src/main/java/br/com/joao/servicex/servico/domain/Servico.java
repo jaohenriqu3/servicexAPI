@@ -2,9 +2,11 @@ package br.com.joãoherique.app.servicex.domain.Servico;
 
 import br.com.joãoherique.servicex.servicex.domain.Servico;
 import jakarta.persistence.*;
-import lombok.Data;
-
-import java.util.list;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import java.util.List;
 
 @Getter
 @Setter

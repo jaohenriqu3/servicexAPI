@@ -3,7 +3,6 @@ package br.com.joãoherique.app.servicex.domain.Categoria;
 import br.com.joãoherique.servicex.servicex.domain.Categoria;
 import jakarta.persistence.*;
 import lombok.Data;
-
 import jakarta.persistence.*;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.Data;
@@ -25,7 +24,6 @@ public class Categoria {
 
     public Categoria(){
     }
-
     public Categoria(Integer idCategoria, String nomeCategoria, List<Servico> servicos) {
         this.idCategoria = idCategoria;
         this.nomeCategoria = nomeCategoria;
