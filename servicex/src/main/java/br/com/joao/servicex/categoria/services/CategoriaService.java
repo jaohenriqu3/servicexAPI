@@ -4,6 +4,7 @@ import br.com.joãoherique.app.servicex.categoria.domain.Categoria;
 import br.com.joãoherique.app.servicex.categoria.services.CategoriaService;
 import org.springframework.beans.factory.annotation.AutoWired;
 import org.springFramework.http.HttpStatus;
+import org.springframework.stereotype.Services;
 import org.springFramework.http.ResponsEntity;
 import org.springFramework.web.bind.annotation.PostMapping;
 import org.springFramework.web.bind.annotation.RequestBody;
